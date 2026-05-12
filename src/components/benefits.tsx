@@ -1,5 +1,5 @@
-import benefit1 from "../assets/benefit-1.png";
-import benefit2 from "../assets/benefit-2.png";
+import benefit1 from "../assets/benefit-1.webp";
+import benefit2 from "../assets/benefit-2.webp";
 
 const Benefits = () => {
   return (

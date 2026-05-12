@@ -1,4 +1,4 @@
-import statsImg from "../assets/stats-img.png";
+import statsImg from "../assets/stats-img.webp";
 
 interface StatPoint {
   percentage: string;

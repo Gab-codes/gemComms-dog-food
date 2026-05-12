@@ -2,7 +2,7 @@ import realFood from "../assets/icons/food.svg";
 import petFood from "../assets/icons/pet-food.svg";
 import petBowl from "../assets/icons/pet-bowl.svg";
 import vet from "../assets/icons/vet.svg";
-import hero from "../assets/hero.png";
+import hero from "../assets/hero.webp";
 import shieldCheck from "../assets/icons/shield-check.svg";
 import paypal from "../assets/icons/paypal.svg";
 import visa from "../assets/icons/visa.svg";
