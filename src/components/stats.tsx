@@ -25,12 +25,12 @@ const Stats = () => {
   ];
 
   return (
-    <div className="py-16 px-6 max-w-7xl mx-auto">
+    <div className="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
         {/* left side */}
-        <div className="flex flex-col h-full pr-8 gap-12">
+        <div className="flex flex-col h-full md:pr-8 gap-12">
           <div className="flex flex-col gap-4">
-            <h2 className="text-4xl lg:text-[40px] font-semibold text-foreground tracking-[0.25px]">
+            <h2 className="text-3xl lg:text-[40px] font-semibold text-foreground tracking-[0.25px]">
               Nutrition is the foundation for longer, healthier lives in dogs.
             </h2>
 
@@ -69,7 +69,7 @@ const Stats = () => {
             </div>
           </div>
 
-          <button className="mt-auto bg-primary w-full text-white font-semibold py-3 px-10 cursor-pointer rounded-md transition-all duration-200 hover:scale-105 tracking-[0.5px]">
+          <button className="mt-auto text-sm md:text-base bg-primary w-full text-white font-semibold py-3 px-10 cursor-pointer rounded-md transition-all duration-200 hover:scale-102 tracking-[0.5px]">
             Give your furry friend the gift of wholesome nutrition
           </button>
         </div>
@@ -79,7 +79,7 @@ const Stats = () => {
           <img
             src={statsImg}
             alt="Happy Dog with Dog Food"
-            className="w-full h-full rounded-[10px] object-cover"
+            className="w-full h-full max-lg:max-h-142.5 rounded-[10px] object-cover"
           />
         </div>
       </div>
