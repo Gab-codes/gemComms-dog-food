@@ -1,4 +1,3 @@
-import "./App.css";
 import Benefits from "./components/benefits";
 import Hero from "./components/hero";
 import Stats from "./components/stats";

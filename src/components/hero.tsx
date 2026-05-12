@@ -1,5 +1,7 @@
 import realFood from "../assets/icons/food.svg";
 import petFood from "../assets/icons/pet-food.svg";
+import petBowl from "../assets/icons/pet-bowl.svg";
+import vet from "../assets/icons/vet.svg";
 import hero from "../assets/hero.png";
 import shieldCheck from "../assets/icons/shield-check.svg";
 import paypal from "../assets/icons/paypal.svg";
@@ -21,33 +23,33 @@ const Hero = () => {
         <div className="flex gap-7.5 items-center justify-between">
           {/* Real Food */}
           <div className="flex flex-col gap-20">
-            <div className="flex gap-4 items-start">
+            <div className="flex gap-6 max-w-92.5 items-start">
               <div className="size-15">
                 <img src={realFood} alt="Real Food" className="w-full h-full" />
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-xl font-semibold text-foreground">
+                <h3 className="text-[19px] tracking-[0.5px] font-semibold text-foreground">
                   Real Food
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-light-text">
                   Wholesome recipes for dogs with real meat and veggies.
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-4 items-start">
+            <div className="flex gap-6 max-w-92.5 items-start">
               <div className="size-15">
                 <img
-                  src={petFood}
+                  src={petBowl}
                   alt="Premium Ingredient"
                   className="w-full h-full"
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-xl font-semibold text-foreground">
+                <h3 className="text-[19px] tracking-[0.5px] font-semibold text-foreground">
                   Premium Ingredient
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-light-text">
                   Elevating pet care with unmatched safety and quality.
                 </p>
               </div>
@@ -63,34 +65,36 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col items-center gap-20">
-            <div className="flex gap-4 items-start">
+            <div className="flex gap-6 max-w-92.5 items-start">
               <div className="size-15">
-                <img src={realFood} alt="Real Food" className="w-full h-full" />
+                <img src={petFood} alt="Real Food" className="w-full h-full" />
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-xl font-semibold text-foreground">
-                  Real Food
+                <h3 className="text-[19px] tracking-[0.5px] font-semibold text-foreground">
+                  Made Fresh
                 </h3>
-                <p className="text-gray-600">
-                  Wholesome recipes for dogs with real meat and veggies.
+                <p className="text-light-text">
+                  We prioritize maintaining the integrity of whole foods and
+                  nutrition.
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-4 items-start">
+            <div className="flex gap-6 max-w-92.5 items-start">
               <div className="size-15">
                 <img
-                  src={petFood}
+                  src={vet}
                   alt="Premium Ingredient"
                   className="w-full h-full"
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-xl font-semibold text-foreground">
-                  Premium Ingredient
+                <h3 className="text-[19px] tracking-[0.5px] font-semibold text-foreground">
+                  Vet Developed
                 </h3>
-                <p className="text-gray-600">
-                  Elevating pet care with unmatched safety and quality.
+                <p className="text-light-text">
+                  We raise the bar for dog nutrition, surpassing industry
+                  expectations.
                 </p>
               </div>
             </div>

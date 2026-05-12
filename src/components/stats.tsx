@@ -29,33 +29,35 @@ const Stats = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
         {/* left side */}
         <div className="flex flex-col h-full pr-8 gap-12">
-          <h2 className="text-4xl lg:text-[40px] font-semibold text-foreground tracking-[0.25px]">
-            Nutrition is the foundation for longer, healthier lives in dogs.
-          </h2>
+          <div className="flex flex-col gap-4">
+            <h2 className="text-4xl lg:text-[40px] font-semibold text-foreground tracking-[0.25px]">
+              Nutrition is the foundation for longer, healthier lives in dogs.
+            </h2>
 
-          <p className="text-[#424153] leading-relaxed">
-            Invest in your dog's future with our scientifically formulated
-            superfood-powered supplements. Give them the nutrition they deserve
-            and watch them thrive with vitality, energy, and the joy of a
-            longer, healthier life.
-          </p>
+            <p className="text-light-text leading-relaxed">
+              Invest in your dog's future with our scientifically formulated
+              superfood-powered supplements. Give them the nutrition they
+              deserve and watch them thrive with vitality, energy, and the joy
+              of a longer, healthier life.
+            </p>
+          </div>
 
-          <div className="pt-4 flex-1">
-            <h3 className="text-xl font-semibold text-foreground mb-6">
+          <div className="pt-4 flex-1 flex flex-col gap-4">
+            <h3 className="text-[19px] font-semibold text-foreground">
               Key Points:
             </h3>
 
             <div className="flex flex-col gap-3">
               {statPoints.map((stat, index) => (
                 <>
-                  <div key={index} className="flex gap-4">
+                  <div key={index} className="flex gap-12">
                     <div className="shrink-0">
-                      <span className="text-3xl font-bold text-primary">
+                      <span className="text-[33px] tracking-[0.25px] font-bold text-primary">
                         {stat.percentage}
                       </span>
                     </div>
                     <div>
-                      <p className="text-[#424153]">{stat.description}</p>
+                      <p className="text-light-text">{stat.description}</p>
                     </div>
                   </div>
 
