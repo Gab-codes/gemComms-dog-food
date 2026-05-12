@@ -15,12 +15,12 @@ const Benefits = () => {
             />
           </div>
           <div className="flex flex-col gap-4 pl-8">
-            <h2 className="text-4xl lg:text-[40px] font-semibold text-foreground">
+            <h2 className="text-4xl lg:text-[40px] tracking-[0.25px] font-semibold text-foreground">
               Improve overall gastrointestinal health for better nutrient
               absorption
             </h2>
 
-            <p className="text-[#424153] leading-relaxed">
+            <p className="text-[#424153] leading-relaxed tracking-[0.5px]">
               Through rigorous scientific studies and consultations with
               veterinarians, we have created a breakthrough formula exclusively
               tailored to combat the health challenges prevalent in dogs. A
@@ -34,18 +34,16 @@ const Benefits = () => {
         {/* bottom content  */}
         <div className="grid grid-cols-2 gap-7.5 items-center">
           <div className="flex flex-col gap-4 pr-8">
-            <h2 className="text-4xl lg:text-[40px] font-semibold text-foreground">
+            <h2 className="text-4xl lg:text-[40px] tracking-[0.25px] font-semibold text-foreground">
               Prebiotics nourish the beneficial gut bacteria, supporting
               digestive health
             </h2>
 
-            <p className="text-[#424153] leading-relaxed">
-              Our product is meticulously crafted with a blend of prebiotics,
-              probiotics, and a unique blend of nutrients that nourish the
-              beneficial gut bacteria, supporting digestive health and overall
-              well-being. By promoting a healthy gut microbiome, our product
-              helps to enhance nutrient absorption, boost the immune system, and
-              improve overall gastrointestinal health in dogs.
+            <p className="text-[#424153] leading-relaxed tracking-[0.5px]">
+              Our dog food formula contains carefully selected prebiotics that
+              work in harmony with the gut microbiota, providing the necessary
+              nutrients for the growth and maintenance of beneficial bacteria,
+              ultimately supporting digestive health.
             </p>
           </div>
           <div>
