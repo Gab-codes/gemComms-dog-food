@@ -1,9 +1,36 @@
-import statsImg from "../assets/stats-img.png";
+import { motion } from "motion/react";
+import statsImg from "../assets/stats-img.webp";
 
 interface StatPoint {
   percentage: string;
   description: string;
 }
+
+const springTransition = {
+  stiffness: 100,
+  damping: 30,
+  mass: 1,
+} as const;
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: springTransition,
+  },
+};
 
 const Stats = () => {
   const statPoints: StatPoint[] = [
@@ -25,65 +52,113 @@ const Stats = () => {
   ];
 
   return (
-    <div className="py-16 px-6 max-w-7xl mx-auto">
+    <motion.div
+      className="py-16 px-4 sm:px-6 max-w-7xl mx-auto"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={containerVariants}
+    >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
         {/* left side */}
-        <div className="flex flex-col h-full pr-8 gap-12">
-          <div className="flex flex-col gap-4">
-            <h2 className="text-4xl lg:text-[40px] font-semibold text-foreground tracking-[0.25px]">
+        <motion.div
+          className="flex flex-col h-full md:pr-8 gap-12"
+          variants={containerVariants}
+        >
+          <motion.div
+            className="flex flex-col gap-4"
+            variants={containerVariants}
+          >
+            <motion.h2
+              className="text-3xl lg:text-[40px] font-semibold text-foreground tracking-[0.25px]"
+              variants={itemVariants}
+            >
               Nutrition is the foundation for longer, healthier lives in dogs.
-            </h2>
+            </motion.h2>
 
-            <p className="text-light-text leading-relaxed">
+            <motion.p
+              className="text-light-text leading-relaxed"
+              variants={itemVariants}
+            >
               Invest in your dog's future with our scientifically formulated
               superfood-powered supplements. Give them the nutrition they
               deserve and watch them thrive with vitality, energy, and the joy
               of a longer, healthier life.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
-          <div className="pt-4 flex-1 flex flex-col gap-4">
-            <h3 className="text-[19px] font-semibold text-foreground">
+          <motion.div
+            className="pt-4 flex-1 flex flex-col gap-4"
+            variants={containerVariants}
+          >
+            <motion.h3
+              className="text-[19px] font-semibold text-foreground"
+              variants={itemVariants}
+            >
               Key Points:
-            </h3>
+            </motion.h3>
 
             <div className="flex flex-col gap-3">
               {statPoints.map((stat, index) => (
-                <>
-                  <div key={index} className="flex gap-12">
-                    <div className="shrink-0">
+                <motion.div
+                  key={index}
+                  variants={containerVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                >
+                  <motion.div className="flex gap-12" variants={itemVariants}>
+                    <motion.div
+                      className="shrink-0"
+                      whileHover={{
+                        scale: 1.1,
+                        transition: springTransition,
+                      }}
+                    >
                       <span className="text-[33px] tracking-[0.25px] font-bold text-primary">
                         {stat.percentage}
                       </span>
-                    </div>
+                    </motion.div>
                     <div>
                       <p className="text-light-text">{stat.description}</p>
                     </div>
-                  </div>
+                  </motion.div>
 
                   {index !== statPoints.length - 1 && (
-                    <span className="border border-[#E3E3E8]" />
+                    <motion.span
+                      className="border border-[#E3E3E8] block mt-3"
+                      variants={itemVariants}
+                    />
                   )}
-                </>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <button className="mt-auto bg-primary w-full text-white font-semibold py-3 px-10 cursor-pointer rounded-md transition-all duration-200 hover:scale-105 tracking-[0.5px]">
+          <motion.button
+            className="mt-auto text-sm md:text-base bg-primary w-full text-white font-semibold py-3 px-10 cursor-pointer rounded-md transition-none tracking-[0.5px]"
+            variants={itemVariants}
+            whileHover={{ scale: 1.02, transition: springTransition }}
+            whileTap={{ scale: 0.98 }}
+          >
             Give your furry friend the gift of wholesome nutrition
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
 
         {/* right side */}
-        <div className="h-full">
+        <motion.div
+          className="h-full"
+          variants={itemVariants}
+          whileHover={{ scale: 1.02, transition: springTransition }}
+        >
           <img
             src={statsImg}
             alt="Happy Dog with Dog Food"
-            className="w-full h-full rounded-[10px] object-cover"
+            className="w-full h-full max-lg:max-h-142.5 rounded-[10px] object-cover"
           />
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
